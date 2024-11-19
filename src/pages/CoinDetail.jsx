@@ -1,5 +1,17 @@
-const CoinDetail = () => {
-    return <h1>CoinDetail</h1>
-}
+import { useLocation, useParams } from "react-router-dom";
 
-export default CoinDetail
+const CoinDetail = () => {
+  const { coinId } = useParams();
+  const { state } = useLocation();
+  console.log(coinId);
+  console.log(state);
+
+  return (
+    <h1>
+      {coinId}
+      {state}
+    </h1>
+  );
+};
+
+export default CoinDetail;
