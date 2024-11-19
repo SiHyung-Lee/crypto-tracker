@@ -21,12 +21,7 @@ const CoinList = () => {
         <ul>
           {coins.map((coin) => (
             <li key={coin.id}>
-              <Link
-                to={{
-                  pathname: `/${coin.id}`,
-                  state: { name: coin.name },
-                }}
-              >
+              <Link to={`/${coin.id}`} state={{ name: coin.name }}>
                 {coin.name}
               </Link>
             </li>
