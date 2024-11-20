@@ -10,6 +10,7 @@ const CoinList = () => {
       const json = await response.json();
       setCoins(json.slice(0, 100));
       setIsLoading(false);
+      console.log(json.slice(0, 100));
     })();
   }, []);
   return (
